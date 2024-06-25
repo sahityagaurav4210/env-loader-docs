@@ -1,18 +1,18 @@
 import { useContext } from "react";
 import { AppThemeContext } from "../contexts";
-import { APP_THEME, Styles } from "../constant";
 import Heading from "../components/Heading";
+import { APP_THEME, Styles } from "../constant";
 
-function Author() {
+function Requirements() {
   const context = useContext(AppThemeContext);
 
-  if (!context) throw new Error("No context provided");
+  if (!context) throw new Error("No context provided.");
 
   const { appTheme } = context;
 
   return (
     <>
-      <Heading headingText="Author" showLine={true} />
+      <Heading headingText="Package Requirements" showLine={true} />
       <p
         className={
           appTheme === APP_THEME.DARK
@@ -20,16 +20,11 @@ function Author() {
             : Styles.Author.PARA.LIGHT
         }
       >
-        <a
-          href={import.meta.env.VITE_APP_LINKEDIN_URL}
-          target="_blank"
-          className="text-lg lg:text-xl text-blue-600"
-        >
-          Gaurav Sahitya
-        </a>
+        This package does not require any additional software, package or
+        library except Node.js to run.
       </p>
     </>
   );
 }
 
-export default Author;
+export default Requirements;

@@ -34,15 +34,22 @@ function Header() {
       >
         <h1 className="text-3xl lg:text-4xl font-bold">ENV Loader</h1>
         {appTheme == APP_THEME.DARK ? (
-          <i
-            className="fa-regular fa-moon fa-xl"
-            onClick={() => setAppTheme(APP_THEME.LIGHT)}
-          ></i>
+          <div className="flex justify-center gap-4">
+            <i
+              className="fa-regular fa-moon fa-xl"
+              onClick={() => setAppTheme(APP_THEME.LIGHT)}
+            ></i>
+            <i className="fa-brands fa-square-github fa-2xl"></i>
+          </div>
+          
         ) : (
-          <i
-            className="fa-regular fa-lightbulb fa-xl"
-            onClick={() => setAppTheme(APP_THEME.DARK)}
-          ></i>
+          <div className="flex justify-center gap-4">
+            <i
+              className="fa-regular fa-lightbulb fa-xl"
+              onClick={() => setAppTheme(APP_THEME.DARK)}
+            ></i>
+            <i className="fa-brands fa-square-github fa-2xl"></i>
+          </div>
         )}
       </header>
     </>
