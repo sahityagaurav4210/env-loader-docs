@@ -9,13 +9,15 @@ function Heading(props: IHeadingComponentProp) {
   if (!context) throw new Error("No context provided");
 
   const { appTheme } = context;
-  const { headingText, showLine } = props;
+  const { headingText, showLine, formatting="px-2 lg:px-0" } = props;
 
   return (
     <>
       <h1
         className={
-          appTheme === APP_THEME.DARK ? Styles.Author.DARK : Styles.Author.LIGHT
+          appTheme === APP_THEME.DARK
+            ? `${Styles.Author.DARK} ${formatting}`
+            : `${Styles.Author.LIGHT} ${formatting}`
         }
       >
         {headingText}

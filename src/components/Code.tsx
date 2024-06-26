@@ -17,7 +17,7 @@ function Code(props: ICodeComponentProp) {
   return (
     <>
       <div className="relative mt-4 mx-1 mb-2">
-        <div className="w-full bg-slate-800 p-4 text-gray-300 text-lg rounded-lg overflow-x-auto">
+        <div className="w-full bg-slate-800 p-4 text-gray-300 text-lg rounded-lg overflow-x-auto shadow-inner shadow-slate-400">
           <code>{command}</code>
           {showClipboard && (
             <div
