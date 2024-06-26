@@ -1,7 +1,9 @@
 import About from "./views/About";
 import Author from "./views/Author";
 import Header from "./views/Header";
+import Installation from "./views/Installation";
 import Requirements from "./views/Requirements";
+import Usage from "./views/Usage";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Author/>
         <About/>
         <Requirements/>
+        <Installation/>
+        <Usage/>
       </main>
     </>
   );

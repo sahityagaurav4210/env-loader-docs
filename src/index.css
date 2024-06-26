@@ -12,3 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.list-img{
+  list-style-image: url('public/hand-point-right.svg');
+  /* color: white; */
+}
