@@ -7,6 +7,7 @@ import Alert from "../components/Alert";
 import { AlertTypes } from "../helpers/enums";
 import { AlertIcons } from "../helpers/icons";
 import Shortcut from "../components/Shortcut";
+import Paragraph from "../components/Paragraph";
 
 function Usage() {
   const context = useContext(AppThemeContext);
@@ -95,13 +96,7 @@ function Usage() {
         icon={AlertIcons.INFO}
       />
       <Heading headingText="LoadENV function" showLine={false} />
-      <p
-        className={
-          appTheme === APP_THEME.DARK ? Styles.PARA.DARK : Styles.PARA.LIGHT
-        }
-      >
-        Function definition
-      </p>
+      <Paragraph content="Function Definition" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
       <Code command="static LoadENV(envPath='[.env]');" showClipboard={false} />
       <Alert
         alertType={AlertTypes.INSIGHT}
@@ -109,13 +104,7 @@ function Usage() {
         content={functionInsightContent}
         icon={AlertIcons.INSIGHT}
       />
-      <p
-        className={
-          appTheme === APP_THEME.DARK ? Styles.PARA.DARK : Styles.PARA.LIGHT
-        }
-      >
-        Function Usage
-      </p>
+      <Paragraph content="Function Usage" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
       <Code
         command="EnvironmentVariables.LoadENV(['.env','.env.development']);"
         showClipboard={false}
@@ -126,6 +115,8 @@ function Usage() {
         content={loadENVFunctionUsageWarning}
         icon={AlertIcons.WARN}
       />
+      <Paragraph content="Function Description" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
+      <Paragraph content="This function loads all the environment variables from the first found file (from the given list of file paths). For example, if a second file is present in the project root directory, it will load all the environment variables from that file."/>
     </>
   );
 }

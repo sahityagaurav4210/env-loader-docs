@@ -27,3 +27,7 @@ export interface IAlertComponentProp {
   icon?: ReactNode;
   content?: ReactNode;
 }
+export interface IParagraphProp {
+  formatting?: string;
+  content: string;
+}
