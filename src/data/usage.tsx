@@ -8,7 +8,7 @@ export const functionDocumentation: IFunctionDocs[] = [
     heading: {
       headingText: "LoadENV function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 w-max max-w-md rounded-md text-white",
+      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
@@ -93,7 +93,7 @@ export const functionDocumentation: IFunctionDocs[] = [
     heading: {
       headingText: "LoadENVIntoVariable function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 w-max max-w-md rounded-md text-white",
+      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
@@ -179,7 +179,7 @@ export const functionDocumentation: IFunctionDocs[] = [
     heading: {
       headingText: "LoadENVIntoCustomVariable function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 w-min max-w-md rounded-md text-white",
+      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
