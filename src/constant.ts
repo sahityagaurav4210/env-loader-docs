@@ -72,7 +72,7 @@ export const Styles = {
     },
     INSIGHT: {
       DIV: {
-        DARK: "max-w-lg bg-blue-950 text-white p-4 mx-2 rounded-lg mb-1",
+        DARK: "max-w-md bg-blue-950 text-white p-4 mx-2 rounded-lg mb-1",
         LIGHT: "max-w-lg bg-cyan-900 text-white p-4 mx-2 rounded-lg mb-1",
       },
       PARA: {

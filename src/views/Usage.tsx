@@ -1,4 +1,4 @@
-import { ReactNode, useContext } from "react";
+import React, { ReactNode, useContext } from "react";
 import { AppThemeContext } from "../contexts";
 import Heading from "../components/Heading";
 import { APP_THEME, Styles } from "../constant";
@@ -8,6 +8,8 @@ import { AlertTypes } from "../helpers/enums";
 import { AlertIcons } from "../helpers/icons";
 import Shortcut from "../components/Shortcut";
 import Paragraph from "../components/Paragraph";
+import { functionDocumentation } from "../data/usage";
+import { IFunctionDocs } from "../interfaces/data";
 
 function Usage() {
   const context = useContext(AppThemeContext);
@@ -33,46 +35,6 @@ function Usage() {
       />
     </p>
   );
-  const functionInsightContent: ReactNode = (
-    <>
-      <ul className="list-disc list-inside">
-        <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-          Returns - void
-        </li>
-
-        <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-          Parameters
-          <ul className="list-decimal list-inside px-5">
-            <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200 text-justify">
-              envPath represents an array of file paths to search for
-              environment variables. By default the list is{" "}
-              <Shortcut shortcut="[.env]" />.
-            </li>
-          </ul>
-        </li>
-
-        <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-          Function type - static
-        </li>
-
-        <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-          Function Time Complexity - O(n)
-        </li>
-
-        <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-          Function Space Complexity - O(1)
-        </li>
-      </ul>
-    </>
-  );
-  const loadENVFunctionUsageWarning: ReactNode = (
-    <>
-      <p className="text-lg lg:text-xl mt-2 text-justify">
-        If the package does not find any of the specified files in the project's
-        root directory, it will throw an error. Please handle this gracefully.
-      </p>
-    </>
-  );
 
   return (
     <>
@@ -95,28 +57,52 @@ function Usage() {
         content={alertContent}
         icon={AlertIcons.INFO}
       />
-      <Heading headingText="LoadENV function" showLine={false} />
-      <Paragraph content="Function Definition" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
-      <Code command="static LoadENV(envPath='[.env]');" showClipboard={false} />
-      <Alert
-        alertType={AlertTypes.INSIGHT}
-        title="Function Insights"
-        content={functionInsightContent}
-        icon={AlertIcons.INSIGHT}
-      />
-      <Paragraph content="Function Usage" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
-      <Code
-        command="EnvironmentVariables.LoadENV(['.env','.env.development']);"
-        showClipboard={false}
-      />
-      <Alert
-        alertType={AlertTypes.WARN}
-        title="Pay attention"
-        content={loadENVFunctionUsageWarning}
-        icon={AlertIcons.WARN}
-      />
-      <Paragraph content="Function Description" formatting="font-bold italic mt-4 underline decoration-wavy mb-2 text-blue-700"/>
-      <Paragraph content="This function loads all the environment variables from the first found file (from the given list of file paths). For example, if a second file is present in the project root directory, it will load all the environment variables from that file."/>
+
+      {functionDocumentation.map((doc: IFunctionDocs, index: number) => (
+        <React.Fragment key={index}>
+          <Heading
+            headingText={doc.heading.headingText}
+            showLine={doc.heading.showLine}
+            formatting={doc.heading.formatting}
+          />
+          <Paragraph
+            content={doc.functionDefinition.content}
+            formatting={doc.functionDefinition.formatting}
+          />
+          <Code
+            command={doc.code.command}
+            showClipboard={doc.code.showClipboard}
+          />
+          <Alert
+            alertType={doc.functionInsight.alertType}
+            title={doc.functionInsight.title}
+            content={doc.functionInsight.content}
+            icon={doc.functionInsight.icon}
+          />
+          <Paragraph
+            content={doc.functionUsage.content}
+            formatting={doc.functionUsage.formatting}
+          />
+          <Code
+            command={doc.usageCode.command}
+            showClipboard={doc.usageCode.showClipboard}
+          />
+          <Alert
+            alertType={doc.functionWarning.alertType}
+            title={doc.functionWarning.title}
+            content={doc.functionWarning.content}
+            icon={doc.functionWarning.icon}
+          />
+          <Paragraph
+            content={doc.functionDescription.content}
+            formatting={doc.functionDescription.formatting}
+          />
+          <Paragraph
+            content={doc.functionDescPara.content}
+            formatting={doc.functionDescPara.formatting}
+          />
+        </React.Fragment>
+      ))}
     </>
   );
 }
