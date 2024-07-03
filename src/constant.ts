@@ -22,9 +22,9 @@ export const Styles = {
       LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0 mt-4",
     },
     CODE: {
-      DARK: "inline-block p-3 rounded-xl text-gray-800 font-bold tracking-wide mt-1 mx-1",
+      DARK: "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1",
       LIGHT:
-        "inline-block p-3 rounded-xl text-gray-800 font-bold tracking-wide mt-1 mx-1",
+        "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1",
     },
     LIST: {
       DARK: "list-inside list-decimal text-white px-2 lg:px-0 text-lg lg:text-xl text-justify",
@@ -81,6 +81,11 @@ export const Styles = {
           "text-lg font-bold p-2 w-max bg-cyan-700 rounded-xl shadow-inner shadow-cyan-500",
       },
     },
+  },
+  BACKBUTTON: {
+    DARK: "min-w-14 min-h-14 p-4 fixed rounded-full flex items-center justify-center bottom-8 right-4 bg-slate-400 opacity-55 focus:opacity-100 cursor-pointer",
+    LIGHT:
+      "min-w-14 min-h-14 p-4 fixed rounded-full bottom-8 right-4 bg-slate-900 opacity-95 text-white flex items-center justify-center focus:opacity-100 cursor-pointer",
   },
 };
 

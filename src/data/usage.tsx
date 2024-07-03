@@ -5,10 +5,12 @@ import { IFunctionDocs } from "../interfaces/data";
 
 export const functionDocumentation: IFunctionDocs[] = [
   {
+    id: "loadENV",
     heading: {
       headingText: "LoadENV function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
+      formatting:
+        "p-3 bg-indigo-600 m-2 lg:w-max text-xl max-w-xs md:max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
@@ -26,7 +28,7 @@ export const functionDocumentation: IFunctionDocs[] = [
         <>
           <ul className="list-disc list-inside">
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-              Returns - void
+              Returns - <Shortcut shortcut="void" />
             </li>
 
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
@@ -90,10 +92,12 @@ export const functionDocumentation: IFunctionDocs[] = [
     },
   },
   {
+    id: "loadENVIntoVariable",
     heading: {
       headingText: "LoadENVIntoVariable function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
+      formatting:
+        "p-3 bg-indigo-600 m-2 lg:w-max text-xl max-w-xs md:max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
@@ -111,7 +115,7 @@ export const functionDocumentation: IFunctionDocs[] = [
         <>
           <ul className="list-disc list-inside">
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-              Returns - void
+              Returns - <Shortcut shortcut="void" />
             </li>
 
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
@@ -176,10 +180,12 @@ export const functionDocumentation: IFunctionDocs[] = [
     },
   },
   {
+    id: "loadENVIntoCustomVariable",
     heading: {
       headingText: "LoadENVIntoCustomVariable function",
       showLine: false,
-      formatting: "p-3 bg-indigo-600 m-2 lg:w-max max-w-md rounded-md text-white",
+      formatting:
+        "p-3 bg-indigo-600 m-2 lg:w-max text-xl max-w-xs md:max-w-md rounded-md text-white",
     },
     functionDefinition: {
       content: "Function Definition",
@@ -198,7 +204,7 @@ export const functionDocumentation: IFunctionDocs[] = [
         <>
           <ul className="list-disc list-inside">
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">
-              Returns - void
+              Returns - <Shortcut shortcut="customVariable" />
             </li>
 
             <li className="text-lg lg:text-xl mt-2 font-bold text-blue-200">

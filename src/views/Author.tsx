@@ -12,7 +12,7 @@ function Author() {
 
   return (
     <>
-      <Heading headingText="Author" showLine={true} />
+      <Heading headingText="Contributors" showLine={true} />
       <p
         className={
           appTheme === APP_THEME.DARK

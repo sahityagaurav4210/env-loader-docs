@@ -34,4 +34,5 @@ export interface IFunctionDocs {
   functionUsage: IParagraph;
   functionDescription: IParagraph;
   functionDescPara: IParagraph;
+  id?: string;
 }
