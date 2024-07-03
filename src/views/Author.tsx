@@ -1,6 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { AppThemeContext } from "../contexts";
-import { APP_THEME, Styles } from "../constant";
+import {  useEffect, useState } from "react";
 import Heading from "../components/Heading";
 import {
   IContributeFailureApiResponse,
@@ -10,7 +8,6 @@ import {
 import Api from "../api";
 
 function Author() {
-  const context = useContext(AppThemeContext);
   const [contributors, setContributors] = useState<
     IContributeSuccessApiResponse[]
   >([]);
@@ -28,11 +25,7 @@ function Author() {
 
     callApi();
   }, []);
-
-  if (!context) throw new Error("No context provided");
-
-  const { appTheme } = context;
-
+  
   return (
     <>
       <Heading headingText="Contributors" showLine={true} />
