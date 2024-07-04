@@ -12,8 +12,8 @@ export const Styles = {
       LIGHT: "mt-1 mb-2 mx-1 lg:mx-0 border-blue-500 border-x-8 border-y-2",
     },
     PARA: {
-      DARK: "text-white text-lg lg:text-xl text-justify px-2 lg:px-0",
-      LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0",
+      DARK: "text-white text-lg lg:text-xl text-justify px-2 lg:px-0 font-arial",
+      LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0 font-arial",
     },
   },
   INSTALLATION: {
@@ -33,8 +33,8 @@ export const Styles = {
     },
   },
   PARA: {
-    DARK: "text-white text-lg lg:text-xl text-justify px-2 lg:px-0",
-    LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0",
+    DARK: "text-white text-lg lg:text-xl text-justify px-2 lg:px-0 font-arial",
+    LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0 font-arial",
   },
   ALERT: {
     INFO: {
