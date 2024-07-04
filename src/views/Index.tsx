@@ -39,6 +39,9 @@ function Index() {
                   LoadENVIntoCustomVariable
                 </a>
               </li>
+              <li>
+                <a href="#loadENVIntoGlobals">LoadENVIntoGlobals</a>
+              </li>
             </ol>
           </div>
           <p>

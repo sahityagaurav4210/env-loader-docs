@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Heading from "../components/Heading";
 import {
   IContributeFailureApiResponse,
@@ -25,7 +25,7 @@ function Author() {
 
     callApi();
   }, []);
-  
+
   return (
     <>
       <Heading headingText="Contributors" showLine={true} />
@@ -41,7 +41,8 @@ function Author() {
                 <img
                   src={contributor.avatar_url}
                   key={contributor.id}
-                  className="w-32 h-32 rounded-full object-cover aspect-square"
+                  className="w-32 h-32 rounded-full object-cover aspect-square shadow-md shadow-amber-200 hover:scale-110"
+                  onClick={() => window.open(contributor.html_url, "_blank")}
                 ></img>
               ))
             )}
