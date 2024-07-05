@@ -41,7 +41,7 @@ function Author() {
                 <img
                   src={contributor.avatar_url}
                   key={contributor.id}
-                  className="w-32 h-32 rounded-full object-cover aspect-square shadow-md shadow-amber-200 hover:scale-110"
+                  className="w-32 h-32 rounded-full object-cover aspect-square shadow-md shadow-amber-200 hover:scale-110 cursor-pointer"
                   onClick={() => window.open(contributor.html_url, "_blank")}
                 ></img>
               ))

@@ -31,3 +31,7 @@ export interface IParagraphProp {
   formatting?: string;
   content: string;
 }
+
+export interface IBacktoTopButtonProp {
+  isVisible: boolean;
+}

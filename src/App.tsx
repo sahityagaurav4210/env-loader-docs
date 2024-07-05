@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import About from "./views/About";
 import Author from "./views/Author";
 import BacktoTopButton from "./views/BacktoTopButton";
@@ -10,6 +11,8 @@ import Requirements from "./views/Requirements";
 import Usage from "./views/Usage";
 
 function App() {
+  const { ref, inView } = useInView({ threshold: 0.4 });
+
   return (
     <>
       <Header />
@@ -23,7 +26,7 @@ function App() {
           <About />
         </section>
 
-        <section id="author">
+        <section id="author" ref={ref}>
           <Author />
         </section>
 
@@ -45,7 +48,7 @@ function App() {
       </main>
 
       <Footer />
-      <BacktoTopButton/>
+      <BacktoTopButton isVisible={inView} />
     </>
   );
 }
