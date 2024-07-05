@@ -14,6 +14,12 @@
   }
 }
 
+@media (min-width: 1364px) {
+  .container {
+      max-width: 1364px;
+  }
+}
+
 @media (min-width: 1536px) {
   .container {
       max-width: 1536px;
