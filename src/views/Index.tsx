@@ -1,7 +1,7 @@
 function Index() {
   return (
     <>
-      <section className="w-96 max-w-xs sm:max-w-sm lg:max-w-md m-auto lg:mx-0 bg-violet-900 text-white p-4 mt-2 rounded-lg shadow-inner shadow-violet-600 font-arial">
+      <section className="w-96 max-w-xs sm:max-w-sm lg:max-w-md m-auto md:mx-2 lg:mx-0 bg-violet-900 text-white p-4 mt-2 rounded-lg shadow-inner shadow-violet-600 font-arial">
         <h1 className="font-bold text-xl underline underline-offset-8 decoration-2 italic">
           On this page
         </h1>
