@@ -10,6 +10,7 @@ export default {
     fontFamily: {
       arial: ["Arial", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
+      fira: ["Fira Code", "monospace"],
     },
   },
   plugins: [],

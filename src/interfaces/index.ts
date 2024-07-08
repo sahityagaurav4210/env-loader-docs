@@ -35,3 +35,7 @@ export interface IParagraphProp {
 export interface IBacktoTopButtonProp {
   isVisible: boolean;
 }
+
+export interface IToolTipProp {
+  text: string;
+}

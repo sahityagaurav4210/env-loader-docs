@@ -22,9 +22,9 @@ export const Styles = {
       LIGHT: "text-black text-lg lg:text-xl text-justify px-2 lg:px-0 mt-4",
     },
     CODE: {
-      DARK: "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1",
+      DARK: "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1 font-fira",
       LIGHT:
-        "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1",
+        "inline-block p-1 rounded-lg text-gray-800 font-bold tracking-wide mt-1 mx-1 font-fira",
     },
     LIST: {
       DARK: "list-inside list-decimal text-white px-2 lg:px-0 text-lg lg:text-xl text-justify",
