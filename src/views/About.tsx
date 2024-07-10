@@ -20,7 +20,10 @@ function About() {
             : Styles.Author.PARA.LIGHT
         }
       >
-        It is an npm package that helps developers load their environment variables from a given list of files. It can also load all the variables into a custom variable provided or add them to Node's global variables, among other capabilities.
+        It is an npm package that helps developers load their environment
+        variables from a given list of files. It can also load all the variables
+        into a custom variable provided or add them to Node's global variables,
+        among other capabilities.
       </p>
     </>
   );

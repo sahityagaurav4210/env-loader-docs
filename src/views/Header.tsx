@@ -32,7 +32,7 @@ function Header() {
         }
         id="header"
       >
-        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold font-roboto italic">ENV Loader Docs</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold font-roboto">Documentation</h1>
         {appTheme == APP_THEME.DARK ? (
           <div className="flex justify-center gap-4">
             <i
